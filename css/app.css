@@ -111,6 +111,10 @@ HERO
   color: rgba(255, 255, 255, 0.8);
 }
 
+.hero p {
+  text-align: center;
+}
+
 .strike {
        display: block;
        text-align: center;
@@ -118,13 +122,13 @@ HERO
        white-space: nowrap;
    }
 
-   .strike > span {
+.strike > span {
        position: relative;
        display: inline-block;
    }
 
-   .strike > span:before,
-   .strike > span:after {
+.strike > span:before,
+.strike > span:after {
        content: "";
        position: absolute;
        top: 50%;
@@ -133,12 +137,12 @@ HERO
        background: white;
    }
 
-   .strike > span:before {
+.strike > span:before {
        right: 100%;
        margin-right: 15px;
    }
 
-   .strike > span:after {
+.strike > span:after {
        left: 100%;
        margin-left: 15px;
    }
