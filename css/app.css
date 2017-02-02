@@ -54,6 +54,7 @@ NAV - DESKTOP
   padding: 0px;
   background-image: url("../images/gray_sand.png");
 }
+
 .site-logo {
   color: white;
   line-height: 80px;
@@ -132,7 +133,7 @@ HERO
        content: "";
        position: absolute;
        top: 50%;
-       width: 50%;
+       width: 40%;
        height: 1px;
        background: white;
    }
