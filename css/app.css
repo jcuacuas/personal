@@ -12,6 +12,9 @@ GENERAL
   margin: 0px auto;
 }
 
+body, h1, h3{
+  font-family: 'Raleway', sans-serif;
+}
 /* *************************************************************
 NAV - MOBILE
 ************************************************************* */
@@ -49,8 +52,8 @@ NAV - DESKTOP
   background-color: #222;
   height: 80px;
   padding: 0px;
+  background-image: url("../images/gray_sand.png");
 }
-
 .site-logo {
   color: white;
   line-height: 80px;
@@ -63,11 +66,12 @@ NAV - DESKTOP
 
 .menu > li >a {
   display: inline-block;
-  line-height: 80px;
+  line-height: 100px;
   padding: 0px 16px;
   color: white;
-  text-transform: capitalize;
-  transition: all 0.3s ease-in-out;
+  transition: all .30s ease-in-out;
+  letter-spacing: 1px;
+  font-size: 15px;
 }
 
 .menu > li > a:hover{
@@ -81,27 +85,8 @@ NAV - DESKTOP
   transition: box-shadow 0.3s ease-in-out;
 }
 
-@keyframes shadowPulse {
-    0% {
-        box-shadow: 0px 0px 10px 0px hsla(0, 0%, 0%, 1);
-    }
-
-    100% {
-        box-shadow: 0px 0px 5px 0px hsla(0, 0%, 0%, 0);
-    }
-}
-
-.white- {
-    animation-name: shadowPulse;
-    animation-duration: 1.5s;
-    animation-iteration-count: 1;
-    animation-timing-function: linear;
-}
-
-.top-bar, .nav-desktop {
-  position: fixed;
-  top: 0;
-  width: 100%;
+.menu > li > a:visited {
+  box-shadow: 0 4px 0 #FFF inset;
 }
 
 /* *************************************************************
@@ -112,17 +97,51 @@ HERO
   background-color: #999;
   padding: 100px 0px 80px 0px;
   height: 400px;
-  background-image: url("../images/sharp.png");
-  margin-top: 40px;
+  background-image: url("../images/gray_sand.png");
+}
+
+.hero h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
 
 .hero h1,
 .hero p {
-  width: 70%;
   color: rgba(255, 255, 255, 0.8);
 }
 
+.strike {
+       display: block;
+       text-align: center;
+       overflow: hidden;
+       white-space: nowrap;
+   }
 
+   .strike > span {
+       position: relative;
+       display: inline-block;
+   }
+
+   .strike > span:before,
+   .strike > span:after {
+       content: "";
+       position: absolute;
+       top: 50%;
+       width: 50%;
+       height: 1px;
+       background: white;
+   }
+
+   .strike > span:before {
+       right: 100%;
+       margin-right: 15px;
+   }
+
+   .strike > span:after {
+       left: 100%;
+       margin-left: 15px;
+   }
 
 
 /* *************************************************************
@@ -174,10 +193,6 @@ footer a:hover {
 MEDIA QUERY
 ************************************************************* */
 @media (max-width: 639px) {
-  .hero {
-    margin-top: 0px;
-    padding-top: 80px;
-  }
   .nav-desktop {
     display: none;
   }
