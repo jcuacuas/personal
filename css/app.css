@@ -12,6 +12,10 @@ GENERAL
   margin: 0px auto;
 }
 
+.nav {
+  width: 95%;
+}
+
 body, h1, h3{
   font-family: 'Raleway', sans-serif;
 }
@@ -90,14 +94,18 @@ NAV - DESKTOP
   box-shadow: 0 4px 0 #FFF inset;
 }
 
+a.active {
+  box-shadow: 0 4px 0 #FFF inset;
+}
+
 /* *************************************************************
 HERO
 ************************************************************* */
 
 .hero {
   background-color: #999;
-  padding: 100px 0px 80px 0px;
-  height: 400px;
+  padding: 250px 0px 80px 0px;
+  height: 100vh;
   background-image: url("../images/gray_sand.png");
 }
 
@@ -114,38 +122,39 @@ HERO
 
 .hero p {
   text-align: center;
+  margin-top: 5px;
 }
 
 .strike {
-       display: block;
-       text-align: center;
-       overflow: hidden;
-       white-space: nowrap;
+  display: block;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
    }
 
 .strike > span {
-       position: relative;
-       display: inline-block;
+  position: relative;
+  display: inline-block;
    }
 
 .strike > span:before,
 .strike > span:after {
-       content: "";
-       position: absolute;
-       top: 50%;
-       width: 40%;
-       height: 1px;
-       background: white;
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 35%;
+  height: 1px;
+  background: white;
    }
 
 .strike > span:before {
-       right: 100%;
-       margin-right: 15px;
+  right: 100%;
+  margin-right: 15px;
    }
 
 .strike > span:after {
-       left: 100%;
-       margin-left: 15px;
+  left: 100%;
+  margin-left: 15px;
    }
 
 
@@ -155,8 +164,42 @@ MAIN SECTION
 
 .main {
   padding: 80px 0px;
+  background-image: url("../images/texturetastic_gray.png");
+  height: 100vh;
 }
 
+
+.fromLeftIn
+{
+	transition: transform 1.5s ease, opacity 1.5s ease;
+
+	transform: translate(0,0);
+	opacity: 1.0;
+}
+
+.fromLeftOut
+{
+	transition: transform 1.5s ease, opacity 1.5s ease;
+
+	transform: translate(-10px,0);
+	opacity: 0.0;
+}
+
+.fromTopIn
+{
+	transition: transform 1.5s ease, opacity 1.5s ease;
+
+	transform: translate(0,0);
+	opacity: 1.0;
+}
+
+.fromTopOut
+{
+	transition: transform 1.5s ease, opacity 1.5s ease;
+
+	transform: translate(0,-10px);
+	opacity: 0.0;
+}
 
 /* *************************************************************
 FOOTER

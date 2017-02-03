@@ -8,6 +8,22 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <script type="text/javascript" src="js/app.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function(){
+    var trigger = new ScrollTrigger();
+});
+
+</script>
+<script>
+$('li a').click(function(e) {
+       e.preventDefault();
+       $('a').removeClass('active');
+       $(this).addClass('active');
+   });
+</script>
+
   </head>
   <body>
     <div class="off-canvas-wrapper">
@@ -38,15 +54,15 @@
 
     <!-- DESKTOP NAVIGATION -->
     <nav class="top-bar nav-desktop">
-      <div class="wrap">
+      <div class="nav">
 
         <div class="top-bar-left">
         </div>
 
         <div class="top-bar-right">
               <ul class="menu menu-desktop" >
-                <li><a href="#">Services</a></li>
                 <li><a href="#">About</a></li>
+                <li><a href="#">Portfolio</a></li>
                 <li><a href="#">Contact</a></li>
               </ul>
           </div>
@@ -59,11 +75,13 @@
     <!-- HEAD SECTION -->
     <section class="hero">
       <div class="wrap">
+        <div data-scroll="toggle(.fromTopIn, .fromTopOut)">
         <div class ="strike">
         <span><h1>Jose Cuacuas</h1></span>
         </div>
         <p> Student at Excesior Academy </p>
       </div>
+    </div>
     </section>
 
 
@@ -71,7 +89,8 @@
     <!-- MAIN SECTION -->
     <section class="main">
       <div class="wrap row">
-        <div class="small-12 medium-7 column">
+        <div data-scroll="toggle(.fromLeftIn, .fromLeftOut)">
+          <div class="small-12 medium-7 column">
           <h1>Main Section</h1>
           <hr>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ultricies in dolor id
@@ -87,15 +106,16 @@
           eget dui. Sed vitae cursus nisi. Aenean non ornare urna. Nulla ultrices dignissim libero.
           Fusce non diam a tellus pellentesque faucibus. Suspendisse vel condimentum eros.</p>
         </div>
-
       </div>
+    </div>
     </section>
 
 
 
 
     <!-- FOOTER -->
-    <footer>
+    <!--<footer>
+
       <div class="wrap row small-up-1 medium-up-3">
         <div class="column">
           <h4>Contact Info </h4>
@@ -121,7 +141,8 @@
           <a href="#"><span> Twitter </span> </a>
         </div>
       </div>
-    </footer>
+
+    </footer>-->
 
 
 
