@@ -60,8 +60,10 @@ NAV - DESKTOP
 }
 
 .site-logo {
-  color: white;
-  line-height: 80px;
+  width: 100px;
+  length: 100px;
+  margin-left: 50px;
+  margin-top: 15px;
 }
 
 .nav-desktop .menu-desktop {
@@ -72,10 +74,10 @@ NAV - DESKTOP
 .menu > li >a {
   display: inline-block;
   line-height: 100px;
-  padding: 0px 16px;
+  padding: 10px 16px;
   color: white;
   transition: all .30s ease-in-out;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   font-size: 15px;
 }
 
@@ -112,7 +114,11 @@ HERO
 .hero h1 {
   display: flex;
   align-items: center;
-  justify-content: center
+  justify-content: center;
+  letter-spacing: 1px;
+  width: 445px;
+  height: 60px;
+  font-size: 60px;
 }
 
 .hero h1,
@@ -142,7 +148,7 @@ HERO
   content: "";
   position: absolute;
   top: 50%;
-  width: 35%;
+  width: 30%;
   height: 1px;
   background: white;
    }
@@ -168,6 +174,10 @@ MAIN SECTION
   height: 100vh;
 }
 
+.about-me {
+  margin-top: 80px;
+  width: 80%;
+}
 
 .fromLeftIn
 {
