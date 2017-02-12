@@ -57,7 +57,7 @@ NAV - DESKTOP
   background-color: #222;
   height: 80px;
   padding: 0px;
-  background-image: url("../images/gray_sand.png");
+  background-image: url("../images/noisy_net.png");
 }
 
 .site-logo {
@@ -75,11 +75,12 @@ NAV - DESKTOP
 .menu > li >a {
   display: inline-block;
   line-height: 100px;
-  padding: 10px 16px;
+  padding: 10px 10px;
   color: white;
   transition: all .30s ease-in-out;
   letter-spacing: 2px;
   font-size: 15px;
+  margin-left: 30px;
 }
 
 .menu > li > a:hover{
@@ -97,7 +98,7 @@ NAV - DESKTOP
   box-shadow: 0 4px 0 #FFF inset;
 }
 
-a.active {
+.menu > li > a:active {
   box-shadow: 0 4px 0 #FFF inset;
 }
 
@@ -109,7 +110,7 @@ HERO
   background-color: #999;
   padding: 250px 0px 80px 0px;
   height: 100vh;
-  background-image: url("../images/gray_sand.png");
+  background-image: url("../images/noisy_net.png");
 }
 
 .hero h1 {
@@ -170,11 +171,12 @@ MAIN SECTION
 
 .main {
   padding: 80px 0px;
-  background-image: url("../images/texturetastic_gray.png");
+  background-image: url("../images/gray_sand.png");
   height: 100vh;
 }
 
 .about-me {
+  color: rgba(255, 255, 255, 0.8);
   margin-top: 80px;
   width: 80%;
 }
