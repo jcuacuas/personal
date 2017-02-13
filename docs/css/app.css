@@ -181,6 +181,10 @@ MAIN SECTION
   width: 80%;
 }
 
+.example-of-works {
+
+}
+
 .fromBottomIn {
   transition: transform 1.0s ease, opacity 1.0s ease;
 
@@ -232,12 +236,12 @@ FOOTER
 ************************************************************* */
 
 footer {
-  padding: 80px 0px;
+  padding: 50px 0px 30px 0px;
   background-color: #222;
 }
 
 footer h4 {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 1.3em;
 }
 
