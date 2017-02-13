@@ -184,7 +184,7 @@ MAIN SECTION
 .hero svg {
 	position: absolute;
   left: 520px;
-  top: 300px;
+  top: 250px;
 	width: 30px;
 
 	animation: chevronAnimation 4s ease-in-out 0s infinite;
