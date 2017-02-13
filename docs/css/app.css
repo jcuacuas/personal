@@ -181,8 +181,69 @@ MAIN SECTION
   width: 80%;
 }
 
-.example-of-works {
+.hero svg {
+	position: absolute;
+  left: 520px;
+  top: 400px;
+	width: 30px;
 
+	animation: chevronAnimation 4s ease-in-out 0s infinite;
+}
+
+.hero svg path
+{
+	fill: #FFF;
+}
+
+
+.example-of-works {
+  padding: 80px 0px;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/light_noise_diagonal.png");
+}
+
+.works {
+  width: 80%;
+}
+
+.video {
+  width: inherit;
+  height: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+.video::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.video:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+.video:hover::after {
+    opacity: 1;
+}
+
+.example-of-works .works  hr {
+  border-color: #808080;
+   border-bottom-color: rgb(255, 255, 255, 1);
 }
 
 .fromBottomIn {
@@ -196,7 +257,7 @@ MAIN SECTION
   transition: transform 1.0s ease, opacity 1.0s ease;
 
   transform: translate(0,10px);
-  opacity: 1.0;
+  opacity: 0.0;
 }
 
 .fromLeftIn
@@ -229,6 +290,18 @@ MAIN SECTION
 
 	transform: translate(0,-10px);
 	opacity: 0.0;
+}
+
+@keyframes chevronAnimation {
+	0% {
+		transform: translate(0,0) scale(1.0,1.0);
+	}
+	50% {
+		transform: translate(0,5px) scale(0.8,0.8);
+	}
+	100% {
+		transform: translate(0,0) scale(1.0,1.0);
+	}
 }
 
 /* *************************************************************
