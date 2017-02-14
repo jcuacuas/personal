@@ -83,7 +83,7 @@ NAV - DESKTOP
   margin-left: 30px;
 }
 
-.menu > li > a:hover{
+.menu > li > a:hover {
   box-shadow: 0 4px 0 #FFF inset;
   opacity: 0.5;
   -webkit-transition: opacity .30s ease-in-out;
@@ -92,10 +92,6 @@ NAV - DESKTOP
   -o-transition: opacity .30s ease-in-out;
   transition: opacity .30s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
-}
-
-.menu > li > a:visited {
-  box-shadow: 0 4px 0 #FFF inset;
 }
 
 .menu > li > a:active {
@@ -178,13 +174,56 @@ MAIN SECTION
 .about-me {
   color: rgba(255, 255, 255, 0.8);
   margin-top: 80px;
-  width: 80%;
+  text-align: center;
+}
+
+.about-me h1::before {
+  left: -15px;
+}
+
+.about-me h1::after {
+  left: 15px
+}
+
+.about-me h1::before,
+.about-me h1::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  background-color: #ffffff;
+  top: -2px;
+}
+
+.about-me .side1 {
+  float: left;
+  text-align: left;
+  width: 50%;
+  padding: 0px 20px;
+  margin-top: 30px;
+}
+
+.side1 {
+  border-right: 1px solid #ffffff;
+}
+
+.about-me .side2 {
+  float: right;
+  text-align: left;
+  width: 50%;
+  padding: 0px 20px;
+  margin-top: 30px;
 }
 
 .hero svg {
 	position: absolute;
   left: 520px;
-  top: 250px;
+  top: 400px;
 	width: 30px;
 
 	animation: chevronAnimation 4s ease-in-out 0s infinite;
@@ -193,71 +232,6 @@ MAIN SECTION
 .hero svg path
 {
 	fill: #FFF;
-}
-
-
-.example-of-works {
-  padding: 80px 0px;
-  height: 100vh;
-  width: 100%;
-  background-image: url("../images/light_noise_diagonal.png");
-}
-
-.works {
-  width: 80%;
-}
-
-.video {
-  width: inherit;
-  height: inherit;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-
-.video::after {
-  content: "";
-  border-radius: 5px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
-  opacity: 0;
-  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.video:hover {
-  -webkit-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
-}
-
-.video:hover::after {
-    opacity: 1;
-}
-
-.example-of-works .works  hr {
-  border-color: #808080;
-   border-bottom-color: rgb(255, 255, 255, 1);
-}
-
-.fromBottomIn {
-  transition: transform 1.0s ease, opacity 1.0s ease;
-
-  transform: translate(0,0);
-  opacity: 1.0;
-}
-
-.fromBottomOut {
-  transition: transform 1.0s ease, opacity 1.0s ease;
-
-  transform: translate(0,10px);
-  opacity: 0.0;
 }
 
 .fromLeftIn
@@ -303,6 +277,160 @@ MAIN SECTION
 		transform: translate(0,0) scale(1.0,1.0);
 	}
 }
+
+
+/* *************************************************************
+PORTFOLIO
+************************************************************* */
+
+.example-of-works {
+  padding: 80px 0px;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/concrete_wall.png");
+  color: rgba(255 , 255 ,255, 0.8);
+}
+
+.works {
+  width: 80%;
+}
+
+.works h1 {
+ margin-bottom: 30px;
+ text-align: center;
+}
+
+.works h1::before {
+  left: -15px;
+}
+
+.works h1::after {
+  left: 15px
+}
+
+.works h1::before,
+.works h1::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  background-color: rgba(255 , 255 ,255, 0.8);
+  top: -2px;
+}
+
+.video {
+  width: inherit;
+  height: inherit;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.video::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 1);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.video:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+.video:hover::after {
+    opacity: 1;
+}
+
+.video-summary {
+  float: right;
+  width: 30%;
+  position: relative;
+  top: -400px;
+}
+
+.skillset {
+  background-color: #999;
+  padding: 250px 0px 80px 0px;
+  height: 100vh;
+  background-image: url("../images/noisy_net.png");
+}
+
+.circlebase {
+  border-radius: 50%;
+}
+
+.circle1 {
+  width: 250px;
+  height: 250px;
+  background: #EF6D3B;
+  text-align: center;
+  display : block;
+  border: 3px solid red;
+  transition: all .30ms ease-in-out;
+}
+
+.circle1 img {
+  width: 150px;
+  height: 150px;
+  vertical-align: middle;
+  margin-top: 45px;
+}
+
+.circle1:hover {
+  animation-name: stretch;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+}
+
+.fromBottomIn {
+  transition: transform 1.0s ease, opacity 1.0s ease;
+
+  transform: translate(0,0);
+  opacity: 1.0;
+}
+
+.fromBottomOut {
+  transition: transform 1.0s ease, opacity 1.0s ease;
+
+  transform: translate(0,10px);
+  opacity: 0.0;
+}
+
+@keyframes stretch {
+  0% {
+    border-radius: 50%;
+    transform: rotate(0deg);
+  }
+
+  50%{
+    border-radius: 20%
+    transform: rotate(30deg);
+  }
+
+  100% {
+    transform: rotate(45deg);
+    border-radius: 0%;
+    }
+}
+
 
 /* *************************************************************
 FOOTER
