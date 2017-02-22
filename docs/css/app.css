@@ -174,6 +174,9 @@ MAIN SECTION
   color: rgba(0, 0, 0, .9);
   margin-top: 80px;
   text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 2em;
 }
 
 .about-me h1::before {
@@ -215,7 +218,7 @@ MAIN SECTION
   float: right;
   text-align: left;
   width: 50%;
-  padding: 0px 20px;
+  padding: 0px 0px 0px 35px;
   margin-top: 30px;
 }
 
@@ -315,6 +318,9 @@ PORTFOLIO
   height: 100vh;
   width: 100%;
   color: rgba(0, 0 ,0, 0.9);
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 2em;
 }
 
 .works {
@@ -387,6 +393,9 @@ PORTFOLIO
   float: right;
   width: 30%;
   position: relative;
+  font-size: 16px;
+  letter-spacing: 1px;
+  line-height: 2em;
 }
 
 .skillset {
@@ -395,31 +404,48 @@ PORTFOLIO
   height: 100vh;
 }
 
-.circle1 {
-  width: 250px;
-  height: 250px;
-  float: left;
+.skillset p {
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 2em;
 }
 
-.circle2 {
+.skillset .row {
+  padding-bottom: 30px;
+}
+
+.circle1 {
+  margin: 0 auto;
   width: 160px;
   height: 160px;
-  float: right;
-  padding-top: 45px;
+}
+
+
+.circle2 {
+  margin: 0 auto;
+  width: 160px;
+  height: 160px;
+}
+
+.circle3 {
+  margin: 0 auto;
+  width: 160px;
+  height: 160px;
 }
 
 .circle1,
-.circle2 {
-  text-align: center;
+.circle2,
+.circle3 {
   display : block;
   -webkit-transition: all 1s; /* Safari 4+ */
   -moz-transition   : all 1s; /* Fx 5+ */
   -o-transition     : all 1s; /* Opera 12+ */
-  transition        :
+  transition        : all 1s;
 }
 
 .circle1:hover,
-.circle2:hover {
+.circle2:hover,
+.circle3:hover {
   animation-name: stretch;
   animation-duration: 2s;
   animation-fill-mode: forwards;
