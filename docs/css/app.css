@@ -225,7 +225,7 @@ MAIN SECTION
 .hero svg {
 	position: absolute;
   left: 520px;
-  top: 400px;
+  top: 250px;
 	width: 30px;
 
 	animation: chevronAnimation 4s ease-in-out 0s infinite;
@@ -440,7 +440,7 @@ PORTFOLIO
   -webkit-transition: all 1s; /* Safari 4+ */
   -moz-transition   : all 1s; /* Fx 5+ */
   -o-transition     : all 1s; /* Opera 12+ */
-  transition        : all 1s;
+  transition        : all 1s ease-in-out;
 }
 
 .circle1:hover,
