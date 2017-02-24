@@ -93,10 +93,6 @@ NAV - DESKTOP
   transition: box-shadow 0.3s ease-in-out;
 }
 
-.menu > li > a:active {
-  box-shadow: 0 4px 0 #FFF inset;
-}
-
 /* *************************************************************
 HERO
 ************************************************************* */
@@ -212,6 +208,10 @@ MAIN SECTION
 
 .side1 {
   border-right: 1px solid #000000;
+}
+
+.side1 strong {
+  color: #ff3b3f;
 }
 
 .about-me .side2 {
@@ -441,6 +441,7 @@ PORTFOLIO
   -moz-transition   : all 1s; /* Fx 5+ */
   -o-transition     : all 1s; /* Opera 12+ */
   transition        : all 1s ease-in-out;
+  opacity: 0.5;
 }
 
 .circle1:hover,
@@ -453,6 +454,7 @@ PORTFOLIO
   animation-timing-function: ease-in-out;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  opacity: 1;
 }
 
 .fromBottomIn {
