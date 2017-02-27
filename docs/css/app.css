@@ -441,19 +441,12 @@ PORTFOLIO
   -moz-transition   : all 1s; /* Fx 5+ */
   -o-transition     : all 1s; /* Opera 12+ */
   transition        : all 1s ease-in-out;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .circle1:hover,
 .circle2:hover,
 .circle3:hover {
-  animation-name: stretch;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-delay: 0;
-  animation-timing-function: ease-in-out;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
   opacity: 1;
 }
 
