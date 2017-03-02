@@ -109,9 +109,7 @@ HERO
   justify-content: center;
   text-align: center;
   letter-spacing: 1px;
-  width: 445px;
-  height: 60px;
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .hero h1,
@@ -122,6 +120,7 @@ HERO
 .hero p {
   text-align: center;
   margin-top: 5px;
+  font-size: 18px;
 }
 
 .strike {
@@ -169,9 +168,12 @@ MAIN SECTION
 .about-me {
   color: rgba(0, 0, 0, .9);
   margin-top: 80px;
-  text-align: center;
-  font-size: 16px;
   letter-spacing: 1px;
+  text-align: center;
+}
+
+.about-me p{
+  font-size: 16px;
   line-height: 2em;
 }
 
@@ -297,8 +299,7 @@ PORTFOLIO
   justify-content: center;
   text-align: center;
   letter-spacing: 1px;
-  height: 60px;
-  font-size: 60px;
+  font-size: 70px;
 }
 
 .hero2 h1,
@@ -308,8 +309,8 @@ PORTFOLIO
 
 .hero2 p {
   text-align: center;
-  margin-top: 5px;
-  font-size: inherit;
+  margin-top: 16px;
+  font-size: 18px;
 }
 
 
@@ -359,9 +360,19 @@ PORTFOLIO
 .video {
   width: 90%;
   height: inherit;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .1);
+  border-radius: 5px;
+  position: relative;
+  display: inline-block;
+  width: 640px;
+  height: 360px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -375,21 +386,27 @@ PORTFOLIO
   width: inherit;
   height: inherit;
   opacity: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
   -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -moz-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -ms-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
   transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .video:hover {
   -webkit-transform: scale(1.1, 1.1);
+  -moz-transition: scale(1.1, 1.1);
+  -ms-transition: scale(1.1, 1.1);
+  -o-transition: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, .8);
 }
 
 .video:hover::after {
     opacity: 1;
 }
 
-.video-summary {
+.video-summary p{
   float: right;
   width: 30%;
   position: relative;
@@ -448,6 +465,12 @@ PORTFOLIO
 .circle2:hover,
 .circle3:hover {
   opacity: 1;
+  animation-name: stretch;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
 .fromBottomIn {
@@ -464,6 +487,20 @@ PORTFOLIO
   opacity: 0.0;
 }
 
+.fromRightIn {
+  transition: transform 1.0s ease, opacity 1.0s ease;
+
+  transform: translate(0,0);
+  opacity: 1.0;
+}
+
+.fromRightOut {
+  transition: transform 1.0s ease, opacity 1.0s ease;
+
+  transform: translate(10px,0);
+  opacity: 0.0;
+}
+
 @keyframes stretch {
   0% {
     transform: rotate(0) translateY(0);
@@ -475,6 +512,28 @@ PORTFOLIO
 
 }
 
+
+/* *************************************************************
+CONTACT
+************************************************************* */
+
+.contact {
+  padding: 80px 0px;
+  background-color: #ffffff;
+  height: 100vh;
+}
+
+.contact h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.5em;
+}
+
+.contact p{
+  padding-top: 10px;
+  width: 80%;
+  line-height: 1.8em;
+  color: rgba(26,26,26,.7);
+}
 
 /* *************************************************************
 FOOTER
