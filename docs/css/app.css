@@ -592,6 +592,8 @@ MEDIA QUERY
 
   .nav-desktop .top-bar-right {
     font-size: 100%;
+    margin-left: 15px;
+    padding-left: 10px
   }
 
   .about-me .side1 {
@@ -619,6 +621,40 @@ MEDIA QUERY
   }
 }
 
+@media (max-width: 640px){
+  .skillset{
+  height: 100em;
+}
+
+  .skillset img {
+    position: fixed;
+  }
+
+.skillset p {
+    padding: 0px 20px;
+  }
+
+.skillset .text1 {
+  margin-top: 100px;
+}
+
+  .circle1, .circle2, .circle3 {
+    width: 120px;
+    height: 120px;
+    margin-left : 40%;
+  }
+
+  .skillset .circle1 {
+  }
+
+  .skillset .circle2 {
+    margin-top: 500px;
+  }
+
+  .skillset .circle3 {
+    margin-top: 1000px;
+  }
+}
 
 @media (max-width: 875px){
   .hero h1,
