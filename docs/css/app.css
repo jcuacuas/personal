@@ -555,7 +555,8 @@ FOOTER
 
 footer {
   padding: 50px 0px 30px 0px;
-  background-color: #222;
+  background-color: #26262a;
+  text-align: center;
 }
 
 footer h4 {
@@ -563,24 +564,58 @@ footer h4 {
   font-size: 1.3em;
 }
 
-footer hr {
-  border-color: rgba(255, 255, 255, 0.1);
-  margin: 10px 0px;
-}
-
 footer a {
-  display: block;
-  color: rgba (255, 255, 255, 0.6);
-  font-size: 0.8em;
-}
-
-footer a span {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: .9em;
+  font-family: 'Raleway', sans-serif;
   font-weight: bold;
-  color: rgba (255, 255, 255, 0.3);
+  letter-spacing: 3px;
 }
 
 footer a:hover {
-  color: rgba (255, 255, 255, 0.8);
+  color: rgba(255, 255, 255 , 0.9);
+}
+
+footer a:focus {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.outer-footer {
+  background-color: #353439;
+  padding: 20px;
+}
+
+.outer-footer p {
+  margin: 0px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Lora', serif;
+  font-size: 25px;
+}
+
+.contact-info {
+  font-size: 25px;
+  margin: 20px;
+  color: rgba(255 ,255, 255, 0.5)
+}
+
+.contact-info a:hover {
+  color: rgba(255, 255, 255 , 1);
+}
+
+.contact-info a:focus {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-info a:active {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copyright {
+  margin-top: 10px;
+  font-size:12px;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 /* *************************************************************
