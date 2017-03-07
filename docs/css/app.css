@@ -71,7 +71,7 @@ NAV - DESKTOP
   background-color: transparent;
 }
 
-.menu > li >a {
+.menu > li > .important {
   display: inline-block;
   line-height: 100px;
   padding: 10px 10px;
@@ -82,7 +82,7 @@ NAV - DESKTOP
   margin-left: 30px;
 }
 
-.menu > li > a:hover {
+.menu > .really-important > a:hover {
   box-shadow: 0 4px 0 #FFF inset;
   opacity: 0.5;
   -webkit-transition: opacity .30s ease-in-out;
@@ -91,6 +91,12 @@ NAV - DESKTOP
   -o-transition: opacity .30s ease-in-out;
   transition: opacity .30s ease-in-out;
   transition: box-shadow 0.3s ease-in-out;
+}
+
+.menu > li > .button {
+  letter-spacing: 1px;
+  font-family: 'Raleway', sans-serif;
+  margin-left: 20px;
 }
 
 /* *************************************************************
@@ -319,7 +325,7 @@ PORTFOLIO
 
 .example-of-works {
   padding: 160px 0px 80px 0px;
-  height: 100vh;
+  height: auto;
   width: 100%;
   color: rgba(0, 0 ,0, 0.9);
   font-size: 16px;
@@ -421,7 +427,7 @@ PORTFOLIO
 .skillset {
   background-color: #edeeef;
   padding: 100px 0px 0px 0px;
-  height: 100vh;
+  height: auto;
 }
 
 .skillset p {
@@ -474,6 +480,12 @@ PORTFOLIO
   animation-delay: 0;
   animation-iteration-count: infinite;
   animation-direction: alternate;
+}
+
+.text1,
+.text2,
+.text3 {
+  margin-top: 45px;
 }
 
 .fromBottomIn {
@@ -553,6 +565,29 @@ CONTACT
 FOOTER
 ************************************************************* */
 
+.outer-footer {
+  background-color: #353439;
+  padding: 20px;
+}
+
+.outer-footer p {
+  margin: 0px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Lora', serif;
+  font-size: 25px;
+}
+
+.outer-footer a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.outer-footer a:hover {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 footer {
   padding: 50px 0px 30px 0px;
   background-color: #26262a;
@@ -579,19 +614,6 @@ footer a:hover {
 
 footer a:focus {
   color: rgba(255, 255, 255, 0.7);
-}
-
-.outer-footer {
-  background-color: #ff3b3f;
-  padding: 20px;
-}
-
-.outer-footer p {
-  margin: 0px;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.9);
-  font-family: 'Lora', serif;
-  font-size: 25px;
 }
 
 .contact-info {
@@ -628,10 +650,15 @@ MEDIA QUERY
     display: none;
   }
 
+.menu > li > a {
+  padding-left: 5px;
+  margin-left: 5px
+}
+
   .nav-desktop .top-bar-right {
     font-size: 100%;
-    margin-left: 15px;
-    padding-left: 10px
+    margin-left: 5px;
+    padding-left: 5px
   }
 
   .about-me .side1 {
@@ -660,37 +687,32 @@ MEDIA QUERY
 }
 
 @media (max-width: 640px){
-  .skillset{
-  height: 100em;
-}
-
-  .skillset img {
-    position: fixed;
-  }
-
-.skillset p {
-    padding: 0px 20px;
-  }
-
-.skillset .text1 {
-  margin-top: 100px;
-}
 
   .circle1, .circle2, .circle3 {
-    width: 120px;
-    height: 120px;
-    margin-left : 40%;
+    margin-top: 15px;
+    width: 130px;
+    height: 130px;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+@media (max-width: 640px){
+  .video iframe{
+    width: auto;
+    height: auto;
   }
 
-  .skillset .circle1 {
+  .works > div > .video {
+    height:inherit;
+    width: inherit;
   }
 
-  .skillset .circle2 {
-    margin-top: 500px;
-  }
-
-  .skillset .circle3 {
-    margin-top: 1000px;
+  .video-summary p{
+    width: 100%;
+    margin-top: 30px;
   }
 }
 
