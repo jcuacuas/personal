@@ -97,6 +97,13 @@ NAV - DESKTOP
   letter-spacing: 1px;
   font-family: 'Raleway', sans-serif;
   margin-left: 20px;
+  color: #ff3b3f;
+  border-color: #ff3b3f;
+}
+
+.button.hollow:hover, .button.hollow:focus {
+  color: rgba(255, 26, 29, 0.6);
+  border-color: rgba(255, 26, 29, 0.6);
 }
 
 /* *************************************************************
@@ -168,7 +175,8 @@ MAIN SECTION
 .main {
   padding: 80px 0px;
   background-color: #edeeef;
-  height: 100vh;
+  height: auto;
+  padding-bottom: 5em;
 }
 
 .about-me {
@@ -176,6 +184,10 @@ MAIN SECTION
   margin-top: 80px;
   letter-spacing: 1px;
   text-align: center;
+}
+
+.about-me h1 {
+  margin-bottom: 1.5em;
 }
 
 .about-me p{
@@ -208,26 +220,31 @@ MAIN SECTION
 
 .about-me .side1 {
   float: left;
-  text-align: left;
+  text-align: center;
   width: 50%;
   padding: 0px 20px;
   margin-top: 30px;
-}
-
-.side1 {
-  border-right: 1px solid #000000;
 }
 
 .side1 strong {
   color: #ff3b3f;
 }
 
-.about-me .side2 {
-  float: right;
-  text-align: left;
-  width: 50%;
-  padding: 0px 0px 0px 35px;
+.about-me hr {
+  width: 10%;
+  border-bottom-color: #353439;
   margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.about-me img{
+  float: right;
+}
+
+.about-me .profile {
+  float: right;
+  vertical-align: top;
+  display: inline-block;
 }
 
 .hero svg {
