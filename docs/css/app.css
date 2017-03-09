@@ -97,13 +97,13 @@ NAV - DESKTOP
   letter-spacing: 1px;
   font-family: 'Raleway', sans-serif;
   margin-left: 20px;
-  color: #ff3b3f;
-  border-color: #ff3b3f;
+  color: rgba(255,255,255, 0.9);
+  border-color: rgba(255,255,255,0.9);
 }
 
 .button.hollow:hover, .button.hollow:focus {
-  color: rgba(255, 26, 29, 0.6);
-  border-color: rgba(255, 26, 29, 0.6);
+  color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 /* *************************************************************
@@ -176,7 +176,7 @@ MAIN SECTION
   padding: 80px 0px;
   background-color: #edeeef;
   height: auto;
-  padding-bottom: 5em;
+  padding-bottom: 15em;
 }
 
 .about-me {
@@ -195,6 +195,7 @@ MAIN SECTION
   line-height: 2em;
 }
 
+/* DIAMONDS
 .about-me h1::before {
   left: -15px;
 }
@@ -217,6 +218,7 @@ MAIN SECTION
   background-color: #000000;
   top: -2px;
 }
+*/
 
 .about-me .side1 {
   float: left;
@@ -245,6 +247,9 @@ MAIN SECTION
   float: right;
   vertical-align: top;
   display: inline-block;
+  width: 350px;
+  height: 350px;
+  margin-top:70px;
 }
 
 .hero svg {
@@ -668,14 +673,12 @@ MEDIA QUERY
   }
 
 .menu > li > a {
-  padding-left: 5px;
   margin-left: 5px
 }
 
   .nav-desktop .top-bar-right {
     font-size: 100%;
     margin-left: 5px;
-    padding-left: 5px
   }
 
   .about-me .side1 {
