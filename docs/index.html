@@ -12,11 +12,59 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i" rel="stylesheet">
     <script src="js/ScrollTrigger.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
     <script>
 document.addEventListener('DOMContentLoaded', function(){
     var trigger = new ScrollTrigger();
 });
 
+</script>
+<script type="text/javascript">
+  jQuery(function( $ ){
+    /**
+     * Demo binding and preparation, no need to read this part
+     */
+      //borrowed from jQuery easing plugin
+      //http://gsgd.co.uk/sandbox/jquery.easing.php
+      $.easing.duration = function(x, t, b, c, d) {
+        var s=1.70158;var p=0;var a=c;
+        if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+        if (a < Math.abs(c)) { a=c; var s=p/4; }
+        else var s = p/(2*Math.PI) * Math.asin (c/a);
+        return a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b;
+      };
+      $('a.back').click(function() {
+        $(this).parents('div.pane').scrollTo(0, 800, { queue:true });
+        $(this).parents('div.section').find('span.message').text( this.title);
+        return false;
+      });
+      //just for the example, to stop the click on the links.
+      $('ul.links').click(function(e){
+        var link = e.target;
+        if (link.target === '_blank') {
+          return;
+        }
+        e.preventDefault();
+        link.blur();
+        if (link.title) {
+          $(this).parent().find('span.message').text(link.title);
+        }
+      });
+
+    // This one is important, many browsers don't reset scroll on refreshes
+    // Reset all scrollable panes to (0,0)
+    $('div.pane').scrollTo(0);
+    // Reset the screen to (0,0)
+    $.scrollTo(0);
+
+    // TOC, shows how to scroll the whole window
+    $('#toc a').click(function() {//$.scrollTo works EXACTLY the same way, but scrolls the whole screen
+      $.scrollTo(this.hash, {duration:900}, { easing:'duration' });
+      $(this.hash).find('span.message').text(this.title);
+      return false;
+    });
+  });
 </script>
 
   </head>
@@ -74,13 +122,17 @@ document.addEventListener('DOMContentLoaded', function(){
     <section class="hero">
       <div class="wrap">
         <div data-scroll="toggle(.fromTopIn, .fromTopOut)">
-        <div class ="strike">
-        <span><h1><b>Jose Cuacuas</b></h1></span>
-        </div>
+          <div class ="strike">
+            <span><h1><b>Jose Cuacuas</b></h1></span>
+          </div>
         <p style="font-family: 'Lora', serif;"> Student at <strong>Excesior Academy </strong></p>
-        <svg viewBox="0 0 60 60">
-          <path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
-        </svg>
+        <div id="toc">
+          <a title="$.scrollTo('#target-examples', 800, {easing:'duration'});" href="#target-examples">
+            <svg viewBox="0 0 60 60">
+              <path d="M52.254 18.327c0.816-0.804 2.127-0.804 2.937 0s0.813 2.103 0 2.907l-23.724 23.49c-0.81 0.804-2.121 0.804-2.937 0l-23.724-23.49c-0.81-0.804-0.81-2.103 0-2.907 0.813-0.804 2.127-0.804 2.937 0l22.257 21.423 22.254-21.423z"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </div>
     </section>
@@ -89,17 +141,15 @@ document.addEventListener('DOMContentLoaded', function(){
 
     <!-- MAIN SECTION -->
     <section class="main">
-      <div class="wrap row">
+      <div id="target-examples" class="wrap row">
         <div>
           <div class="about-me">
           <h1 data-scroll="toggle(.fromLeftIn, .fromLeftOut) offset(0,200px) once ">About Me</h1>
           <div class="side1" data-scroll="toggle(.fromLeftIn, .fromLeftOut) offset(0,300px) once ">
-            <p><strong>Welcome to my Website!</strong> My name is Jose Cuacuas and I’m in my third year at Excelsior Academy P-TECH. I’ve always had a strong interest in technology and I thought that joining excelsior would give me the opportunity to pursue that interest. I enjoy coding and continue to get better through the many things that I do, such as this website.
+            <p><strong>Welcome to my Website!</strong>  My name is Jose Cuacuas and I am in my third year at Excelsior Academy, a New York State P-TECH school. I’ve always had a strong interest in technology and joining Excelsior gives me the opportunity to pursue that interest. I enjoy coding and am continually growing my skills through projects, such as the development of this website.
             </p>
             <hr>
-            <p> Welcome to my Website! My name is Jose Cuacuas and I am in my third year at Excelsior Academy, a New York State P-TECH school. I’ve always had a strong interest in technology and joining Excelsior gives me the opportunity to pursue that interest. I enjoy coding and am continually growing my skills through projects, such as the development of this website.
-
-I am intellectually curious and enjoy learning new things. Whether it school curriculum or driven by self-interest, I find learning to be a fun experience. I am fluent in both English and Spanish, but I have studied other languages, such as Italian. On my free time I like to play video games and hula hoop. </p>
+            <p> I am intellectually curious and enjoy learning new things. Whether it school curriculum or driven by self-interest, I find learning to be a fun experience. I am fluent in both English and Spanish, but I have studied other languages, such as Italian. On my free time I like to play video games and hula hoop. </p>
             </div>
           <div class="profile" data-scroll="toggle(.fromLeftIn, .fromLeftOut) offset(0,300px) once ">
             <img src="images/self(4).png" alt="Myself">
